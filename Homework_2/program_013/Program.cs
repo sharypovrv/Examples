@@ -6,15 +6,20 @@
 
 Console.Clear();
 
-// int number = new Random().Next(-1000000, 1000000);
 Console.Write("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
 
-int abs = Math.Abs(number);
-
-if (abs / 100 == 0) Console.WriteLine($"У числа {number} нет третьей цифры.");
+if (number / 100 == 0)
+    Console.WriteLine($"У числа {number} нет третьей цифры.");
 else
 {
-    int third = (abs / 100) % 10;
-    Console.WriteLine($"У числа {number} третье число это {third}.");
+    int third = number % 10;
+    int temp = number / 10;
+    
+    while (temp / 100 != 0)
+    {
+        third = temp % 10;
+        temp = temp / 10;
+    }
+    Console.WriteLine($"У числа {number} третья цифра это {third}.");
 }
