@@ -38,5 +38,4 @@ int size = int.Parse(Console.ReadLine()!);
 
 int[] array = GetArray(size, -19, 19);
 Console.WriteLine(string.Join(", ", array));
-Console.WriteLine();
 Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях, равна {GetSumOddPosition(array)}.");

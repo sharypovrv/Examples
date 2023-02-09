@@ -28,7 +28,6 @@ int GetCountEven(int[] array)
 Console.Write("Введите количество элементов массива: ");
 int size = int.Parse(Console.ReadLine()!);
 
-int[] array = GetArray(size, 1, 999);
+int[] array = GetArray(size, 100, 999);
 Console.WriteLine(string.Join(", ", array));
-Console.WriteLine();
 Console.WriteLine($"Количество четных чисел равно {GetCountEven(array)}.");

@@ -21,9 +21,10 @@ void PrintDoubleArray(double[] array)
     {
         Console.Write($"{item:f2}; ");
     }
+    Console.WriteLine();
 }
 
-double findMin(double[] array)
+double FindMin(double[] array)
 {
     double min = array[0];
     foreach (double item in array)
@@ -33,7 +34,7 @@ double findMin(double[] array)
     return min;
 }
 
-double findMax(double[] array)
+double FindMax(double[] array)
 {
     double max = array[0];
     foreach (double item in array)
@@ -45,7 +46,7 @@ double findMax(double[] array)
 
 double DiffBetweenMaxMin(double[] array)
 {
-    return findMax(array) - findMin(array);
+    return FindMax(array) - FindMin(array);
 }
 
 Console.Write("Введите количество элементов массива: ");
@@ -53,7 +54,5 @@ int size = int.Parse(Console.ReadLine()!);
 
 double[] array = GetDoubleArray(size, 0, 100);
 PrintDoubleArray(array);
-// Console.WriteLine(string.Join(", ", array));
 
-Console.WriteLine();
-Console.WriteLine($"Разница между максимальным ({findMax(array):f2}) и минимальным ({findMin(array):f2}) элементов массива равна {DiffBetweenMaxMin(array):f2}.");
+Console.WriteLine($"Разница между максимальным ({FindMax(array):f2}) и минимальным ({FindMin(array):f2}) элементов массива равна {DiffBetweenMaxMin(array):f2}.");
