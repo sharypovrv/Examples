@@ -51,7 +51,7 @@ double DiffBetweenMaxMin(double[] array)
 Console.Write("Введите количество элементов массива: ");
 int size = int.Parse(Console.ReadLine()!);
 
-double[] array = GetDoubleArray(size, 0, 99);
+double[] array = GetDoubleArray(size, 0, 100);
 PrintDoubleArray(array);
 // Console.WriteLine(string.Join(", ", array));
 
