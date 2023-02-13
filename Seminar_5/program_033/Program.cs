@@ -19,7 +19,7 @@ bool isThereNumber(int[] array, int number)
 {
     foreach (int el in array)
     {
-        if (el == number) result = true;
+        if (el == number) return true;
     }
 
     return false;
