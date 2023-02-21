@@ -1,9 +1,6 @@
 ﻿Console.Clear();
 
-int index = 0;
-
-while(index <= 20)
-{
-    Console.WriteLine($"{index / 3} {index % 3}");
-    index++;
-}
+int a = 2;
+int b = 3;
+double c = Convert.ToDouble(a) / b;
+Console.WriteLine(c);
